@@ -2,6 +2,8 @@
  * @param {number[]} nums
  * @return {number}
  */
+// 动态规划问题
+// maxSubArray(array, i) = maxSubArray(array, i-1) > 0 ? maxSubArray(array, i-1) : 0 + array[i]
 var maxSubArray = function(nums) {
     const n = nums.length;
     const dp = []; //dp[i] means the maximum subarray ending with A[i];
