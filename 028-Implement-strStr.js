@@ -4,7 +4,8 @@
  * @return {number}
  */
 var strStr = function(haystack, needle) {
-    if(haystack === '' && needle === '') return 0    
+    if(!needle) return 0;
+    if(!haystack || needle.length > haystack.length) return -1;
     
 	const len = haystack.length
 	const nLen = needle.length
